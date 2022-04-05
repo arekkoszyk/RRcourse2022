@@ -16,3 +16,7 @@ library(chron)
 **Succession** is an American satirical black comedy-drama television series created by Jesse Armstrong. It premiered on June 3, 2018, on HBO. The series centers on the Roy family, the dysfunctional owners of Waystar RoyCo, a global media and entertainment conglomerate, who are fighting for control of the company amid uncertainty about the health of the family's patriarch, Logan Roy (Brian Cox). In October 2021, the series was renewed for a fourth season.
 
 ![Succession](/Users/arek/Desktop/RR/Assignment2/RRcourse2022/SuccessionTV.png)
+```{r}
+load("/Users/arek/Desktop/RR/Assignment2/RRcourse2022/Data/season_1.RData")
+summary(season_data)
+```
