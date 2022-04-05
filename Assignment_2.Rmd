@@ -22,3 +22,6 @@ summary(season_data)
 plot(season_data$viewers)
 plot(diff(season_data$viewers))
 ```
+
+The viewership increased by `r round((season_data$viewers[nrow(season_data)] - 
+         season_data$viewers[1])/season_data$viewers[1]*100)` percent between the last and the first episode in the season 1).
