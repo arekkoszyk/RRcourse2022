@@ -19,4 +19,6 @@ library(chron)
 ```{r}
 load("/Users/arek/Desktop/RR/Assignment2/RRcourse2022/Data/season_1.RData")
 summary(season_data)
+plot(season_data$viewers)
+
 ```
