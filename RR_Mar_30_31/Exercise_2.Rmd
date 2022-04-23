@@ -3,6 +3,8 @@ title: "Exercise 2"
 author: "Arkadiusz Koszyk"
 date: "4/10/2022"
 output: html_document
+params:
+  season: 1
 ---
 
 ```{r setup, include=FALSE}
