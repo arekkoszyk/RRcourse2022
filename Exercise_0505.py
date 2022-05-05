@@ -12,8 +12,8 @@ def convert(f, target='c'):
 class TestDivide(unittest.TestCase):
     def test_divide_floats(self):
         self.assertEqual(convert(50), 10)
-        self.assertEqual(convert(70), 21.1111111)
-        self.assertEqual(convert(90), 32.2222222)
+        self.assertAlmostEqual(convert(70), 21.1111111)
+        self.assertAlmostEqual(convert(90), 32.2222222)
 
 if __name__ == '__main__':
     unittest.main()
