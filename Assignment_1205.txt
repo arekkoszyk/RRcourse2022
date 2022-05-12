@@ -1,0 +1,2 @@
+total 4
+drwxrwxr-x 2 arek_koszyk arek_koszyk 4096 May 12 15:32 class
