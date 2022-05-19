@@ -1,0 +1,49 @@
+---
+title: "Assignment_1905"
+author: "Arkadiusz Koszyk"
+date: "5/19/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(meta)
+library(metafor)
+library(dplyr)
+```
+
+```{r}
+library("readxl")
+mdata <- read_excel("data/metaanalysis_data.xlsx")
+str(mdata)
+```
+
+**Neutral toys** (1 = neutral toys included; 2 = neutral toys not included)
+**Parent present** (1 = absent; 2 = minimal interaction; 3 = moderate or full interaction)
+**Setting** = location of study (1 = home; 2 = laboratory; 3 = nursery)
+**Country** = gender inequality index, a measure of how gender egalitarian the country was at the time the study took place.
+
+```{r}
+m <- metagen(TE=Mean_boys_play_male,
+             seTE=SD_boys_play_male,
+             data=mdata,
+             studlab=paste(Study),
+             fixed = TRUE,
+             random = FALSE)
+m %>% funnel()
+```
+
+```{r}
+m %>% funnel(contour = c(.95,.975,.99),
+      col.contour=c("darkblue","blue","lightblue"))
+ legend(1.4, 0, c("p < 0.05", "p<0.025", "< 0.01"),bty = "n")
+#       fill=c("darkblue","blue","lightblue"))
+```
+
+```{r}
+m %>% forest(sortvar=Mean_boys_play_male)
+```
+```{r}
+m %>% metareg(`Setting` + `Country`)
+```
+

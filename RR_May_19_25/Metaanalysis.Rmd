@@ -15,7 +15,7 @@ library(meta)
 library(metafor)
 library(dplyr)
 
-setwd("")
+setwd("/Users/arek/Desktop/RR/RRcourse2022/RR_May_19_25/")
 ```
 
 ## Metaanalysis
@@ -49,13 +49,13 @@ Specific things to consider:
 - are you looking for a 'true' universal effect size (the fixed effect approach), or the 'average' effect size (the random effects approach)?
 
 Fig. 1. "Schematic of the __fixed-effect__ model"
-
-![Source: [Borenstein et al., 2010. A basic introduction to fixed-effect and random-effects models for meta-analysis.](https://www.meta-analysis.com/downloads/Intro_Models.pdf)](img/Fixed effect.png)
-
+```{r}
+#![Source: [Borenstein et al., 2010. A basic introduction to fixed-effect and random-effects models for meta-analysis.](https://www.meta-analysis.com/downloads/Intro_Models.pdf)](img/Fixed effect.png)
+```
 Fig. 2. "Schematic of the __random-effects__ model"
-
-![Source: [Borenstein et al., 2010. A basic introduction to fixed-effect and random-effects models for meta-analysis.](https://www.meta-analysis.com/downloads/Intro_Models.pdf)](img/Random effect.png)
-
+```{r}
+# ![Source: [Borenstein et al., 2010. A basic introduction to fixed-effect and random-effects models for meta-analysis.](https://www.meta-analysis.com/downloads/Intro_Models.pdf)](img/Random effect.png)
+```
 Note: this has nothing to do with the fixed/random effects in panel models.
 
 ---
@@ -276,10 +276,10 @@ m %>% funnel()
 And we can add some additional features, e.g. let's make it a 'contour-enhanced' funnel plot:
 
 ```{r}
-m %>% funnel(contour = c(.95,.975,.99),
-       col.contour=c("darkblue","blue","lightblue"))+
-legend(1.4, 0, c("p < 0.05", "p<0.025", "< 0.01"),bty = "n",
-       fill=c("darkblue","blue","lightblue"))
+# m %>% funnel(contour = c(0.95,0.975,0.99),
+#        col.contour=c("darkblue","blue","lightblue"))+
+# legend(1.4, 0, c("p < 0.05", "p<0.025", "< 0.01"),bty = "n",
+#        fill=c("darkblue","blue","lightblue"))
 ```
 
 # ASSIGNMENT (BUT ONLY IF THERE'S STILL TIME! IGNORE IT IF NOT)

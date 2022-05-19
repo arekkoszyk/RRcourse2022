@@ -34,9 +34,9 @@ sessionInfo()
 
 Here's an easy way to save it among your project files:
 ```{r}
-sink(file="session_info.txt")
-sessionInfo()
-sink()
+# sink(file="session_info.txt")
+# sessionInfo()
+# sink()
 ```
 In Python, a more elaborate way of handling this could be [through `requirements.txt`](https://note.nkmk.me/en/python-pip-install-requirements/).
 
@@ -78,7 +78,7 @@ View(old.packages())
 ```
 
 ```{r}
-# install.packages("highr")
+ install.packages("highr")
 ```
 
 Take a look at the contents of `renv.lock`. Let's update this.
